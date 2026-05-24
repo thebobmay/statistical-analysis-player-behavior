@@ -1,0 +1,14 @@
+# Data files — large, not tracked
+data/raw/*.zip
+data/raw/*.csv
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
