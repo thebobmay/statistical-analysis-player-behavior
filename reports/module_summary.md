@@ -7,13 +7,13 @@
 
 ## Overview
 
-This project examines whether players who report higher intrinsic enjoyment tend to play in longer sessions, using longitudinal gameplay telemetry and survey data collected from players of PowerWash Simulator. The analysis follows the Initial Data Analysis framework (Lusa et al., 2024), which emphasizes systematic inspection of data structure, quality, and potential bias before any hypothesis is tested. The primary analytical method is a two-sided Mann-Whitney U test comparing per player median session lengths between a High enjoyment group and a Low enjoyment group. A supplemental binary classification comparison using Logistic Regression and Random Forest is included to evaluate whether behavioral telemetry features can predict group membership without access to survey responses. The dataset is publicly available at https://doi.org/10.17605/OSF.IO/WPEH6 under a CC0 1.0 license.
+This project examines whether players who report higher intrinsic enjoyment tend to play in longer sessions, using longitudinal gameplay telemetry and survey data collected from players of PowerWash Simulator. The analysis follows the Initial Data Analysis framework (Lusa et al., 2024), which emphasizes systematic inspection of data structure, quality, and potential bias before any hypothesis is tested. The primary analytical method is a two sided Mann-Whitney U test comparing per player median session lengths between a High enjoyment group and a Low enjoyment group. A supplemental binary classification comparison using Logistic Regression and Random Forest is included to evaluate whether behavioral telemetry features can predict group membership without access to survey responses. The dataset is publicly available at [https://doi.org/10.17605/OSF.IO/WPEH6](https://doi.org/10.17605/OSF.IO/WPEH6) under a CC0 1.0 license.
 
 ---
 
 ## Dataset Description
 
-The dataset is an intensive longitudinal study of player behavior and well being in PowerWash Simulator, collected and published by Vuorre et al. (2023) under a CC0 1.0 public domain license (https://doi.org/10.17605/OSF.IO/WPEH6). It covers 11,080 participants across 39 countries over 222 days of data collection. Data were collected through a combination of automatic gameplay telemetry events and in game survey prompts delivered at regular intervals during play.
+The dataset is an intensive longitudinal study of player behavior and well being in PowerWash Simulator, collected and published by Vuorre et al. (2023) under a CC0 1.0 public domain license ([https://doi.org/10.17605/OSF.IO/WPEH6](https://doi.org/10.17605/OSF.IO/WPEH6)). It covers 11,080 participants across 39 countries over 222 days of data collection. Data were collected through a combination of automatic gameplay telemetry events and in game survey prompts delivered at regular intervals during play.
 
 Five files were used in this analysis:
 
@@ -59,7 +59,7 @@ Effect size was reported as the rank-biserial correlation r. Values near 0 indic
 
 ### Visualizations
 
-Three charts were produced to support interpretation of the data and results. A histogram of per player median session lengths illustrates the right-skewed distribution that motivates the choice of a non-parametric test. A side-by-side boxplot compares session length distributions between the High and Low enjoyment groups, making the overlap and small separation between groups visually apparent. A histogram of per player mean enjoyment scores shows the ceiling effect and negative skew that characterize the study population. Each chart includes a Markdown interpretation cell immediately following it in the notebook.
+Three charts were produced to support interpretation of the data and results. A histogram of per player median session lengths illustrates the right-skewed distribution that motivates the choice of a non parametric test. A side by side boxplot compares session length distributions between the High and Low enjoyment groups, making the overlap and small separation between groups visually apparent. A histogram of per player mean enjoyment scores shows the ceiling effect and negative skew that characterize the study population. Each chart includes a Markdown interpretation cell immediately following it in the notebook.
 
 ---
 
@@ -214,10 +214,10 @@ An agentic pipeline could monitor live session telemetry, compute rolling engage
 
 Cohen, J. (1988). *Statistical power analysis for the behavioral sciences* (2nd ed.). Lawrence Erlbaum Associates.
 
-Deci, E. L., & Ryan, R. M. (2000). The "what" and "why" of goal pursuits: Human needs and the self-determination of behavior. *Psychological Inquiry, 11*(4), 227-268. https://doi.org/10.1207/S15327965PLI1104_01
+Deci, E. L., & Ryan, R. M. (2000). The "what" and "why" of goal pursuits: Human needs and the self-determination of behavior. *Psychological Inquiry, 11*(4), 227-268. [https://doi.org/10.1207/S15327965PLI1104_01](https://doi.org/10.1207/S15327965PLI1104_01)
 
 Field, A. (2013). *Discovering statistics using IBM SPSS statistics* (4th ed.). SAGE Publications.
 
-Lusa, L., Proust-Lima, C., Schmidt, C. O., Lee, K. J., le Cessie, S., Baillie, M., Lawrence, F., & Huebner, M., on behalf of TG3 of the STRATOS Initiative. (2024). Initial data analysis for longitudinal studies to build a solid foundation for reproducible analysis. *PLOS ONE, 19*(5), e0295726. https://doi.org/10.1371/journal.pone.0295726
+Lusa, L., Proust-Lima, C., Schmidt, C. O., Lee, K. J., le Cessie, S., Baillie, M., Lawrence, F., & Huebner, M., on behalf of TG3 of the STRATOS Initiative. (2024). Initial data analysis for longitudinal studies to build a solid foundation for reproducible analysis. *PLOS ONE, 19*(5), e0295726. [https://doi.org/10.1371/journal.pone.0295726](https://doi.org/10.1371/journal.pone.0295726)
 
-Vuorre, M., Magnusson, K., Johannes, N., Butlin, J., & Przybylski, A. K. (2023). An intensive longitudinal dataset of in-game player behaviour and well-being in PowerWash Simulator. *Scientific Data, 10*, 622. https://doi.org/10.1038/s41597-023-02530-3
+Vuorre, M., Magnusson, K., Johannes, N., Butlin, J., & Przybylski, A. K. (2023). An intensive longitudinal dataset of in-game player behaviour and well-being in PowerWash Simulator. *Scientific Data, 10*, 622. [https://doi.org/10.1038/s41597-023-02530-3](https://doi.org/10.1038/s41597-023-02530-3)
