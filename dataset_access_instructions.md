@@ -1,10 +1,12 @@
 # Dataset Access Instructions
 
-**Dataset:** An intensive longitudinal dataset of in-game player behaviour and well-being in PowerWash Simulator
+**Dataset:** An intensive longitudinal dataset of in game player behaviour and well being in PowerWash Simulator
 
 **Source:** Vuorre, M., Magnusson, K., Johannes, N., Butlin, J., & Przybylski, A. K. (2023). An intensive longitudinal dataset of in-game player behaviour and well-being in PowerWash Simulator. *Scientific Data, 10*, 622. https://doi.org/10.1038/s41597-023-02530-3
 
 **Data DOI:** https://doi.org/10.17605/OSF.IO/WPEH6
+
+**Note on source platform:** This dataset is distributed through the Open Science Framework (OSF), which serves as the official data repository for the peer-reviewed paper cited above. OSF is a standard archival platform for datasets published in scientific journals. The authoritative reference for this dataset is the Vuorre et al. (2023) paper in *Scientific Data* (Nature Publishing Group), not the hosting platform.
 
 ---
 
@@ -22,9 +24,9 @@ The notebook reads CSV files directly from the zip archive.
 
 | File | Contents |
 |---|---|
-| `study_prompt_answered.csv` | In-game survey responses across all 6 prompt types |
+| `study_prompt_answered.csv` | In game survey responses across all 6 prompt types |
 | `exited_game.csv` | Session exit events including session duration |
-| `demographics.csv` | Participant-level demographic and summary data |
+| `demographics.csv` | Participant level demographic and summary data |
 | `player_logged_in.csv` | Login events per player |
 | `job_completed.csv` | Job completion events |
 

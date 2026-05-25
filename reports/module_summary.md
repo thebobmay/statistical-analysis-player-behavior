@@ -7,7 +7,7 @@
 
 ## Overview
 
-This project examines whether players who report higher intrinsic enjoyment tend to play in longer sessions, using longitudinal gameplay telemetry and survey data collected from players of PowerWash Simulator. The analysis follows the Initial Data Analysis framework (Lusa et al., 2024), which emphasizes systematic inspection of data structure, quality, and potential bias before any hypothesis is tested. The primary analytical method is a two-sided Mann-Whitney U test comparing per player median session lengths between a High enjoyment group and a Low enjoyment group. A supplemental binary classification comparison using Logistic Regression and Random Forest is included to evaluate whether behavioral telemetry features can predict group membership without access to survey responses.
+This project examines whether players who report higher intrinsic enjoyment tend to play in longer sessions, using longitudinal gameplay telemetry and survey data collected from players of PowerWash Simulator. The analysis follows the Initial Data Analysis framework (Lusa et al., 2024), which emphasizes systematic inspection of data structure, quality, and potential bias before any hypothesis is tested. The primary analytical method is a two-sided Mann-Whitney U test comparing per player median session lengths between a High enjoyment group and a Low enjoyment group. A supplemental binary classification comparison using Logistic Regression and Random Forest is included to evaluate whether behavioral telemetry features can predict group membership without access to survey responses. The dataset is publicly available at https://doi.org/10.17605/OSF.IO/WPEH6 under a CC0 1.0 license.
 
 ---
 
