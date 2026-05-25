@@ -16,11 +16,11 @@ The workflow covers dataset loading and inspection, data preparation using the I
 
 ## Dataset
 
-**Name:** An intensive longitudinal dataset of in-game player behaviour and well-being in PowerWash Simulator
+**Name:** An intensive longitudinal dataset of in game player behaviour and well being in PowerWash Simulator  
 **Source:** Vuorre, M., Magnusson, K., Johannes, N., Butlin, J., & Przybylski, A. K. (2023). Scientific Data, 10, 622.
 **License:** CC0 1.0 Universal (public domain)
 **Players:** 11,080 across 39 countries over 222 days
-**Target variable:** High vs. low enjoyment group (median split of per-player mean Enjoyment score)
+**Target variable:** High vs. low enjoyment group (median split of per player mean Enjoyment score)
 
 See `dataset_access_instructions.md` for full download instructions.
 
@@ -44,9 +44,9 @@ outputs/tables/                                  summary tables
 ## How to Run
 
 1. Create and activate a Python environment (Python 3.13.3 was used for this project):
-   ```
+  ```
    python -m venv .venv
-   ```
+  ```
    On Windows:
    ```
    .venv\Scripts\activate
@@ -56,33 +56,33 @@ outputs/tables/                                  summary tables
    source .venv/bin/activate
    ```
 2. Install dependencies:
-   ```
+  ```
    pip install -r requirements.txt
-   ```
+  ```
 3. Download the dataset from OSF (see `dataset_access_instructions.md`) and place `data.zip` into `data/raw/`. The notebook reads CSV files directly from the zip archive.
 4. Open the notebook in Jupyter:
-   ```
+  ```
    jupyter notebook notebooks/analysis.ipynb
-   ```
+  ```
 5. Run all cells from top to bottom.
 
 ---
 
 ## Bias and Responsible Data Handling
 
-The dataset reflects players who opted into a research study while playing a specific commercial game on Steam, which skews toward engaged players and English-speaking PC gaming demographics. Survey responses are voluntary and may reflect self-selection bias. Enjoyment scores show a strong positive skew, with most players reporting high enjoyment. Results should be interpreted as descriptive of this study population and not generalized to all players or game genres.
+The dataset reflects players who opted into a research study while playing a specific commercial game on Steam, which skews toward engaged players and English speaking PC gaming demographics. Survey responses are voluntary and may reflect self selection bias. Enjoyment scores are negatively skewed, with most players reporting high enjoyment and a spike near the maximum of the scale. Results should be interpreted as descriptive of this study population and not generalized to all players or game genres.
 
 ---
 
 ## Future Integration Reflection
 
-### How this analysis could support the AI Game Director Studio
+### How this analysis could support future gaming integrations
 
 Statistical patterns in session length and intrinsic motivation establish a quantitative baseline for how engagement signals relate to player behavior. This layer informs how the Game Director might weight or interpret telemetry signals when making recommendations.
 
 ### How this dataset and model would need to evolve for deeper integration
 
-The dataset was collected from a single game under research conditions. A production system would need telemetry from multiple titles, real-time collection pipelines, and motivation proxies derived from behavioral signals rather than survey responses, which are unavailable outside a research setting.
+The dataset was collected from a single game under research conditions. A production system would need telemetry from multiple titles, real time collection pipelines, and motivation proxies derived from behavioral signals rather than survey responses, which are unavailable outside a research setting.
 
 ### How agentic automation could assist this workflow
 

@@ -1,7 +1,7 @@
 # Statistical Analysis of Player Behavior and Motivation in Gameplay Telemetry
 
 **Student:** Robert Mayfield  
-**Course:** Udacity AI Masters Capstone — Project 2: Statistical Analysis
+**Course:** Udacity AI Masters Capstone, Project 2: Statistical Analysis
 
 ---
 
@@ -13,7 +13,7 @@ This project examines whether players who report higher intrinsic enjoyment tend
 
 ## Dataset Description
 
-The dataset is an intensive longitudinal study of player behavior and well being in PowerWash Simulator, collected and published by Vuorre et al. (2023) under a CC0 1.0 public domain license. It covers 11,080 participants across 39 countries over 222 days of data collection. Data were collected through a combination of automatic gameplay telemetry events and in game survey prompts delivered at regular intervals during play.
+The dataset is an intensive longitudinal study of player behavior and well being in PowerWash Simulator, collected and published by Vuorre et al. (2023) under a CC0 1.0 public domain license (https://doi.org/10.17605/OSF.IO/WPEH6). It covers 11,080 participants across 39 countries over 222 days of data collection. Data were collected through a combination of automatic gameplay telemetry events and in game survey prompts delivered at regular intervals during play.
 
 Five files were used in this analysis:
 
@@ -27,13 +27,13 @@ Five files were used in this analysis:
 | `job_completed.csv`         | 155,100 job completion events                                            |
 
 
-Three additional files were excluded: `game_saved.csv` is deprecated in dataset version 1.1.0, and `subtask_completed.csv` and `update_current_state.csv` provide sub session event granularity not required for session- evel analysis and would exceed available memory when loaded.
+Three additional files were excluded: `game_saved.csv` is deprecated in dataset version 1.1.0, and `subtask_completed.csv` and `update_current_state.csv` provide sub session event granularity not required for session-level analysis and would exceed available memory when loaded.
 
 The analysis uses Enjoyment responses exclusively, as Enjoyment is the Self Determination Theory construct most directly associated with intrinsic motivation (Deci & Ryan, 2000).
 
 ---
 
-## Analytical Approach
+## Methods
 
 ### Research Question
 
@@ -56,6 +56,10 @@ Players were assigned to High or Low enjoyment groups using a median split of ea
 A two sided Mann-Whitney U test was used to compare per player median session lengths between groups. The Mann-Whitney U test is a non-parametric rank based test appropriate when the normality assumption cannot be met (Field, 2013). Per player median session length, rather than mean, was used as the outcome variable to reduce the influence of the right skewed session length distribution.
 
 Effect size was reported as the rank-biserial correlation r. Values near 0 indicate no effect; |r| < 0.1 is negligible, 0.1 to 0.3 is small, 0.3 to 0.5 is medium, and above 0.5 is large (Cohen, 1988).
+
+### Visualizations
+
+Three charts were produced to support interpretation of the data and results. A histogram of per player median session lengths illustrates the right-skewed distribution that motivates the choice of a non-parametric test. A side-by-side boxplot compares session length distributions between the High and Low enjoyment groups, making the overlap and small separation between groups visually apparent. A histogram of per player mean enjoyment scores shows the ceiling effect and negative skew that characterize the study population. Each chart includes a Markdown interpretation cell immediately following it in the notebook.
 
 ---
 
@@ -92,7 +96,7 @@ The Mann-Whitney U test was chosen over an independent samples t-test because th
 
 Effect size is reported alongside the p-value because statistical significance alone is insufficient for interpreting results with large samples. With over 4,200 players per group, the test has power to detect trivially small differences. The rank-biserial correlation r provides a scale independent measure of the practical magnitude of any detected difference (Cohen, 1988).
 
-For the supplemental classification models, macro F1 and accuracy are reported for a balanced binary classification problem. Both metrics are appropriate because the two groups are nearly equal in size (4,206 vs. 4,212).
+For the supplemental classification models, macro F1 and accuracy are reported for a balanced binary classification problem. Both metrics are appropriate because the two groups are nearly equal in size (4,163 vs. 4,176).
 
 ---
 
@@ -138,7 +142,7 @@ Both models perform at approximately 51% accuracy, indistinguishable from a rand
 
 ## Interpretation for a Non-Technical Audience
 
-The study asked whether players who enjoy a game more tend to play longer each session. The statistical test found a real difference between the groups, but a very small one: players who reported higher enjoyment played an average of 2.8 minutes longer per session than players who reported lower enjoyment. In practical terms, this difference is too small to be meaningful for any design or business decision.
+The study asked whether players who enjoy a game more tend to play longer each session. The statistical test found a real difference between the groups, but a very small one: the High enjoyment group had a median session length of 67.0 minutes compared to 64.2 minutes for the Low group, a difference of 2.8 minutes. In practical terms, this difference is too small to be meaningful for any design or business decision.
 
 Neither a simple model nor a more complex one could predict which enjoyment group a player belonged to just by looking at their play behavior, performing no better than a coin flip. This tells us that how much a player reports enjoying the game is not strongly connected to how long they play or how many tasks they complete in this dataset.
 
